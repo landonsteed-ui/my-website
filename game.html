@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Guessing Game</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", Georgia, serif;
+            background: white;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            margin: 0 8px;
+            text-decoration: none;
+            color: #4a2c8a;
+        }
+
+        .game-box {
+            border: 1px solid black;
+            padding: 25px;
+            margin-top: 25px;
+            border-radius: 4px;
+        }
+
+        #quote {
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .options button {
+            display: block;
+            width: 70%;
+            margin: 8px auto;
+            padding: 10px;
+            font-size: 16px;
+            font-family: "Times New Roman", Georgia, serif;
+            background: #f3f3f3;
+            border: 1px solid #444;
+            cursor: pointer;
+        }
+
+        .options button:hover {
+            background: #e6e6e6;
+        }
+
+        #result {
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #next-btn {
+            margin-top: 15px;
+            padding: 8px 18px;
+            font-size: 16px;
+            border: 1px solid #444;
+            background: #fafafa;
+            cursor: pointer;
+        }
+
+        #next-btn:hover {
+            background: #e6e6e6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Navigation -->
+        <div class="nav">
+            <a href="index.html">Home</a> |
+            <a href="resume.html">Resume</a> |
+            <a href="game.html">Game</a>
+        </div>
+
+        <h1>Quote Guessing Game</h1>
+        <p>Who said the following quote?</p>
+
+        <div class="game-box">
+            <div id="quote">Loading quote...</div>
+
+            <div class="options">
+                <button onclick="checkAnswer('Taylor Swift')">Taylor Swift</button>
+                <button onclick="checkAnswer('Dumbledore')">Dumbledore</button>
+                <button onclick="checkAnswer('Thomas S. Monson')">Thomas S. Monson</button>
+                <button onclick="checkAnswer('Uncle Iroh')">Uncle Iroh</button>
+            </div>
+
+            <div id="result"></div>
+
+            <button id="next-btn" onclick="nextQuote()">Next Quote</button>
+        </div>
+    </div>
+
+    <script>
+        const quotes = [
+    // Existing quotes
+    {
+        text: "Happiness can be found even in the darkest of times, if one only remembers to turn on the light.",
+        speaker: "Dumbledore"
+    },
+    {
+        text: "The greatest gift you can give to others is the gift of yourself.",
+        speaker: "Thomas S. Monson"
+    },
+    {
+        text: "Life happens when you’re busy making other plans, but you decide what it becomes.",
+        speaker: "Taylor Swift"
+    },
+    {
+        text: "Sometimes life is like this dark tunnel. You can't always see the light at the end, but if you just keep moving, you will come to a better place.",
+        speaker: "Uncle Iroh"
+    },
+
+    // New Dumbledore quotes
+    {
+        text: "It does not do to dwell on dreams and forget to live.",
+        speaker: "Dumbledore"
+    },
+    {
+        text: "We must all face the choice between what is right and what is easy.",
+        speaker: "Dumbledore"
+    },
+    {
+        text: "Words are, in my not-so-humble opinion, our most inexhaustible source of magic.",
+        speaker: "Dumbledore"
+    },
+
+    // New Thomas S. Monson quotes
+    {
+        text: "Decisions determine destiny.",
+        speaker: "Thomas S. Monson"
+    },
+    {
+        text: "Choose your love; love your choice.",
+        speaker: "Thomas S. Monson"
+    },
+    {
+        text: "The past is behind, learn from it. The future is ahead, prepare for it.",
+        speaker: "Thomas S. Monson"
+    },
+
+    // New Taylor Swift quotes
+    {
+        text: "People haven't always been there for me, but music always has.",
+        speaker: "Taylor Swift"
+    },
+    {
+        text: "In life, you learn lessons. And sometimes you learn them the hard way.",
+        speaker: "Taylor Swift"
+    },
+    {
+        text: "Just because something is over doesn’t mean it wasn’t incredibly beautiful.",
+        speaker: "Taylor Swift"
+    },
+
+    // New Uncle Iroh quotes
+    {
+        text: "Sharing tea with a fascinating stranger is one of life’s true delights.",
+        speaker: "Uncle Iroh"
+    },
+    {
+        text: "Failure is only the opportunity to begin again. Only this time, more wisely.",
+        speaker: "Uncle Iroh"
+    },
+    {
+        text: "It is usually best to admit mistakes when they occur, and to seek to restore honor.",
+        speaker: "Uncle Iroh"
+    }
+];
+
+
+        let currentQuote = {};
+
+        function nextQuote() {
+            currentQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById("quote").textContent = currentQuote.text;
+            document.getElementById("result").textContent = "";
+        }
+
+        function checkAnswer(choice) {
+            const result = document.getElementById("result");
+            if (choice === currentQuote.speaker) {
+                result.textContent = "Correct!";
+                result.style.color = "green";
+            } else {
+                result.textContent = "Incorrect — it was " + currentQuote.speaker + ".";
+                result.style.color = "red";
+            }
+        }
+
+        // load first quote
+        nextQuote();
+    </script>
+</body>
+</html>

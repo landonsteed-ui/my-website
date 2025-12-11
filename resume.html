@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Landon Steed — Resume</title>
+  <style>
+    /* Basic page reset */
+    :root {
+      --accent: #111;
+      --muted: #444;
+      --max-width: 900px;
+      --gutter: 20px;
+      --serif: "Times New Roman", Georgia, serif;
+    }
+    html,body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: var(--serif);
+      color: #000;
+      background: #fff;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 28px auto;
+      padding: 28px;
+      box-sizing: border-box;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 18px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 0.5px;
+    }
+    .contact {
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Section styles */
+    section {
+      margin-top: 18px;
+    }
+    h2 {
+      font-size: 14px;
+      margin: 6px 0 10px 0;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    /* Entry layout: left content, right date/location */
+    .entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    .entry .left {
+      width: calc(100% - 180px);
+    }
+    .entry .right {
+      width: 160px;
+      text-align: right;
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+      padding-left: 12px;
+      box-sizing: border-box;
+    }
+    .role {
+      font-weight: 700;
+      margin: 0;
+      font-size: 15px;
+    }
+    .org {
+      font-style: italic;
+      color: var(--muted);
+      margin: 2px 0 6px 0;
+      font-size: 14px;
+    }
+
+    ul {
+      margin: 6px 0 12px 18px;
+    }
+    li {
+      margin-bottom: 6px;
+      line-height: 1.28;
+      font-size: 14px;
+    }
+
+    /* Two-column grid for wide screens for sections like Awards where compact is fine */
+    .compact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 28px;
+    }
+
+    /* Print friendliness */
+    @media print {
+      .page { margin: 0; box-shadow: none; }
+      header { border-bottom: 1px solid #000; }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+      .entry { flex-direction: column; }
+      .entry .left, .entry .right { width: 100%; text-align: left; }
+      .entry .right { margin-top: 6px; }
+      .compact-grid { grid-template-columns: 1fr; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Landon Steed</h1>
+      <div class="contact">
+        740 North 600 East, Provo, UT 84606 &nbsp;•&nbsp; (801) 201-5101 &nbsp;•&nbsp; landonsteed@gmail.com
+      </div>
+    </header>
+
+    <!-- Education -->
+    <section>
+      <h2>Education</h2>
+
+      <div class="entry">
+        <div class="left">
+          <p class="role">Brigham Young University — Marriott School of Business</p>
+          <p class="org">Bachelor of Science in Finance</p>
+          <ul>
+            <li>Total GPA 3.90 / 4.00</li>
+            <li>BYU - Full Tuition, Academic Scholarship</li>
+            <li>Marriott School of Business Dean's List (top 5% of students), Fall 2024</li>
+            <li>Association Membership: Finance Society, Prelaw Student Association</li>
+          </ul>
+        </div>
+        <div class="right">Provo, UT — Apr 2028</div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section>
+      <h2>Experience</h2>
+
+      <div class="entry">
+        <div class="left">
+          <p class="role">Teacher Assistant</p>
+          <p class="org">Brigham Young University (Family Finance)</p>
+          <ul>
+            <li>Led review sessions and offered individual guidance on course material</li>
+            <li>Collaborated with faculty to improve course content and student engagement</li>
+            <li>Held weekly office hours to help students apply financial concepts to real-world scenarios</li>
+            <li>Graded coursework and provided constructive feedback to enhance student learning outcomes</li>
+          </ul>
+        </div>
+        <div class="right">Provo, UT — Sep 2025 &ndash; Present</div>
+      </div>
+
+      <div class="entry">
+        <div class="left">
+          <p class="role">Deliverables Manager</p>
+          <p class="org">Sumsion Business Law (On-Campus Internship)</p>
+          <ul>
+            <li>Trained team members in filming and editing techniques to enhance video production quality</li>
+            <li>Taught attorneys how to effectively showcase their strengths and virtues to attract future clients</li>
+            <li>Collaborated with legal professionals to script, film, and refine personalized videos that resonated with clients</li>
+            <li>Developed video content tailored to professional services, aligning visual storytelling with branding objectives</li>
+          </ul>
+        </div>
+        <div class="right">Provo, UT — Jan 2025 &ndash; Apr 2025</div>
+      </div>
+
+      <div class="entry">
+        <div class="left">
+          <p class="role">Language Actor</p>
+          <p class="org">The Church of Jesus Christ of Latter-day Saints (Missionary Training Center)</p>
+          <ul>
+            <li>Oversaw language and teaching development for hundreds of volunteers</li>
+            <li>Assessed volunteers' teaching abilities and language proficiency to enhance growth</li>
+            <li>Trained volunteers in teaching and language skills by providing real life experience from ~20 countries</li>
+            <li>Facilitated cross-cultural communication, equipping volunteers to connect effectively with diverse communities</li>
+          </ul>
+        </div>
+        <div class="right">Provo, UT — Sep 2024 &ndash; May 2025</div>
+      </div>
+    </section>
+
+    <!-- Leadership & Service -->
+    <section>
+      <h2>Leadership &amp; Service</h2>
+
+      <div class="entry">
+        <div class="left">
+          <p class="role">Volunteer</p>
+          <p class="org">Annual International Law and Religion Symposium</p>
+          <ul>
+            <li>Served as a liaison for international delegates, assisting with logistics and communication</li>
+            <li>Created a welcoming first impression through professional hospitality and cultural awareness</li>
+          </ul>
+        </div>
+        <div class="right">Provo, UT — Oct 2025</div>
+      </div>
+
+      <div class="entry">
+        <div class="left">
+          <p class="role">Clubs Night Marketing Team Lead</p>
+          <p class="org">Student Connection and Leadership Center</p>
+          <ul>
+            <li>Led weekly team meetings on how to better market BYUSA Clubs Night</li>
+            <li>Developed and executed marketing strategies to increase event attendance and engagement</li>
+            <li>Coordinated with BYUSA President and Vice Presidents to improve campus belonging</li>
+          </ul>
+        </div>
+        <div class="right">Provo, UT — Sep 2024 &ndash; Apr 2025</div>
+      </div>
+
+      <div class="entry">
+        <div class="left">
+          <p class="role">Volunteer Representative</p>
+          <p class="org">The Church of Jesus Christ of Latter-day Saints</p>
+          <ul>
+            <li>Taught and interacted with a diverse set of people from over 42 different countries</li>
+            <li>Organized weekly presentations and seminars focused on effective instruction, education, and service</li>
+            <li>Engaged in leadership training and shared administrative oversight of over 180 full-time representatives</li>
+          </ul>
+        </div>
+        <div class="right">Lisbon, Portugal — Jul 2022 &ndash; Jul 2024</div>
+      </div>
+    </section>
+
+    <!-- Awards, Skills & Interests -->
+    <section>
+      <h2>Awards, Skills &amp; Interests</h2>
+      <div class="compact-grid">
+        <div>
+          <ul>
+            <li>Fluent in Continental Portuguese</li>
+            <li>Performed the cello at The Grand America Hotel</li>
+            <li>2nd Place, Highschool State Volleyball Championship</li>
+          </ul>
+        </div>
+        <div>
+          <!-- reserved for additional quick facts or skills if needed -->
+        </div>
+      </div>
+    </section>
+
+    <footer style="margin-top:18px; font-size:12px; color:var(--muted);">
+      References available upon request.
+    </footer>
+  </div>
+</body>
+</html>
